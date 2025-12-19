@@ -108,9 +108,7 @@ if prompt:
 
       brain= ChatGoogleGenerativeAI(model = "gemini-2.5-flash",temperature = 1 , max_output_tokens = 100)
 
-      # MODEL READS MEMORY + TEMPLATE COMBINED
-      response = brain.invoke(st.session_state["memory"])
-
+      response = brain.invoke(p)
 
       with st.chat_message("assistant"):
                     st.write(response.content)
