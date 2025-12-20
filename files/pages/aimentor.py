@@ -76,7 +76,7 @@ if prompt:
     # FORMAT PROMPT
     p = c.format(query=prompt,subject=subject,experience=experience)
 
-    brain = ChatGoogleGenerativeAI(model="gemini-2.5-flash",temperature=1,max_output_tokens=100)
+    brain = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite",temperature=1,max_output_tokens=100)
 
     response = brain.invoke(p)
 
