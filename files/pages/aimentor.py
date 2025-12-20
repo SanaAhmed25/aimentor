@@ -67,6 +67,7 @@ for y in st.session_state["conv"]:
 if prompt:
 
     st.session_state["conv"].append({"role": "user", "content": prompt})
+    st.session_state["memory"].append(("user", prompt))
     col1,col2 = st.columns(2) 
     with col2:
          with st.chat_message("user"):
